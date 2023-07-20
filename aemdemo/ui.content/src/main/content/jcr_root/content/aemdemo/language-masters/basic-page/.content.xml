@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-07-20T22:24:53.952+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/aemdemo/templates/demotest"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Basic Page"
+        sling:resourceType="/apps/aemdemo/components/structure/page">
+        <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <helloworld
+                jcr:created="{Date}2023-07-18T23:19:16.384+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-07-18T23:19:28.686+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemdemo/components/helloworld"
+                text="Hello World.."/>
+            <author
+                jcr:created="{Date}2023-07-19T15:02:17.533+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-07-20T15:51:48.017+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemdemo/components/author"
+                books="[A man in the boat,The hound of the Bhaskarvilles]"
+                isProf="true"/>
+            <author_books
+                jcr:created="{Date}2023-07-20T16:08:26.395+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-07-20T22:24:53.944+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemdemo/components/author-books"
+                authorname="Guru"
+                books="[A man in the boat,The hound of the Bhaskarvilles]">
+                <bookdetailswithmap jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        bookname="A man in the boat"
+                        booksubject="Life"
+                        publishyear="1980"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        bookname="The hound of the Bhaskarvilles"
+                        booksubject="Suspense"
+                        publishyear="1960"/>
+                </bookdetailswithmap>
+                <bookdetailswithbean jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        bookname="A man in the beach"
+                        copies="100"
+                        publishdate="{Date}2023-07-13T00:00:00.000+05:30"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        bookname="Deep Sea 3D"
+                        copies="400"
+                        publishdate="{Date}2023-07-28T00:00:00.000+05:30"/>
+                </bookdetailswithbean>
+                <bookdetailswithnestedmultifield jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        bookname="Book1"
+                        booksubject="Man">
+                        <bookeditions jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                bookediton="5"
+                                editondate="{Date}2023-07-29T00:00:00.000+05:30"/>
+                        </bookeditions>
+                    </item0>
+                </bookdetailswithnestedmultifield>
+            </author_books>
+        </content>
+    </jcr:content>
+    <demo-home-page/>
+    <demo-content-page/>
+</jcr:root>

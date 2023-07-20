@@ -1,0 +1,34 @@
+<div data-sly-use.books = "com.aem.demo.core.models.AuthorBooks">
+	<h1>${books.authorName} Books Component</h1>
+	===============Multifield with single field========================
+	<div data-sly-list.item = "${books.authorBooks}">
+		====================Books Count : ${itemList.count}======================
+		<p> Book Name: <b>${item} </b></p>
+	</div>
+	-------------------- Without using Sling Model----------------------------
+	<p> All Books : <b>${books.authorBooks @ join=", "}</b></p>
+	--------------------  Using Map---------------------
+	<div data-sly-list.item="${books.bookDetailsWithMap}">
+		-----------------------Book : ${itemList.count}--------------------------
+		<p> Book: <b>${item.bookname} </b></p>
+		<p> Subject: <b>${item.booksubject} </b></p>
+		<p> Publish Year: <b>${item.publishyear} </b></p>		
+	</div>
+	------------------------- Using Bean -----------------------------------
+	 <div data-sly-list.item="${books.bookDetailsWithBean}">
+		-----------------------Book : ${itemList.count}--------------------------
+		<p> Book: <b>${item.bookName} </b></p>
+		<p> Date: <b>${'MMM dd, yyyy' @ format=item.publishDate} </b></p>
+		<p> Copies: <b>${item.copies} </b></p>		
+	</div>
+	------------------------- Using NESTED MULTIFIELD -----------------------------------
+	 <div data-sly-list="${books.bookDetailsWithNestedMultifield}">
+		-----------------------Book : ${itemList.count}--------------------------
+		<p> Book: <b>${item.bookName} </b></p>
+		<p> Subject: <b>${item.bookSubject} </b></p>
+		<div data-sly-list.edition="${item.bookEditions}">
+			<p> Book Edition: <b>${edition.bookEdition} </b></p>
+			<p> Published Date: <b>${'MMM dd, yyyy' @ format=edition.editionDate} </b></p>	
+		</div>
+	</div>
+</div>

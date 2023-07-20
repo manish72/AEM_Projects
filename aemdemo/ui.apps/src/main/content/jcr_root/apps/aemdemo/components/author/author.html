@@ -1,0 +1,17 @@
+<h2>Author Component</h2>
+<!--
+<p><b>First Name : </b>${properties.fname}</p>
+<p><b>Last Name : </b>${properties.lname}</p>
+<div data-sly-test="${properties.isProf}">${properties.fname} ${properties.lname} is a professor</div>
+<div data-sly-repeat.item="${properties.books}">
+    <p><b>Book Name:</b> ${item}<p>
+</div>
+-->
+<div data-sly-use.author = "${'com.aem.demo.core.models.Author' @ rAttribute='TestAttribute'}">
+    <div>First Name : ${author.firstName}</div>
+    <div>Last Name : ${author.lastName}</div>
+    <div>Current Page Title : ${author.currentPageTitle}</div>
+    <div>Request Attribute : ${author.requestAttribute}</div>
+    <div>Page Name : ${author.basicPageName}</div>
+    <div>Last Modified By : ${author.lastModifiedBy}</div>
+</div>

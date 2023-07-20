@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-07-19T12:22:10.103+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/aemdemo/templates/democontent"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Demo Content Page"
+        sling:resourceType="aemdemo/components/structure/democontent"/>
+    <test-child-page/>
+</jcr:root>
