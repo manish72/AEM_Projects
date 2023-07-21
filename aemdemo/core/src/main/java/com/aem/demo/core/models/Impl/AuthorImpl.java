@@ -39,8 +39,8 @@ import com.fasterxml.jackson.annotation.JsonRootName;
 )
 @Exporter(name = "jackson", extensions = "json", selector = "demo",
 options = {
-		@ExporterOption(name = "SerializationFeature.WRAP_ROOT_VALUE", value="true"),
-		@ExporterOption(name = "MapperFeature.SORT_PROPERTIES_ALPHABETICALLY", value="true")
+		@ExporterOption(name = "SerializationFeature.WRAP_ROOT_VALUE", value="true"),/* this option is used when we need to use JsonRootName annotation */
+		@ExporterOption(name = "MapperFeature.SORT_PROPERTIES_ALPHABETICALLY", value="true")/* this option is used when we need to sort the keys of JSON items */
 })
 @JsonRootName("AuthorDetails")
 public class AuthorImpl implements Author{
@@ -84,7 +84,7 @@ public class AuthorImpl implements Author{
     boolean isProf;
 
     @Override
-    @JsonProperty(value = "AuthorFirstName")
+    @JsonProperty(value = "AuthorFirstName") /* to rename the key of firstName to our own custom name, this annotation is used */ 
     public String getFirstName() {
         return fname;
     }
@@ -105,7 +105,7 @@ public class AuthorImpl implements Author{
     }
 
 	@Override
-	@JsonIgnore
+	@JsonIgnore /* to ignore the current key-value pair inside JSON, this annotation is used */ 
 	public String getRequestAttribute() {
 		return reqAttribute;
 	}
@@ -115,7 +115,7 @@ public class AuthorImpl implements Author{
 		return resource.getName();
 	}
 	
-	@PostConstruct /* Once all injections are completed, this method will execute*/
+	@PostConstruct /* Once all injections are completed, this method will execute */
 	protected void init() {
 		LOG.info("\n Inside init method {} : {}",currentPage.getTitle(),resource.getPath());
 	}
