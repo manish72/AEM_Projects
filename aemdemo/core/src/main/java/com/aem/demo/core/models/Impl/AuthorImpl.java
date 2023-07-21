@@ -9,6 +9,8 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
+import org.apache.sling.models.annotations.Exporter;
+import org.apache.sling.models.annotations.ExporterOption;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Required;
 import org.apache.sling.models.annotations.Via;
@@ -25,13 +27,25 @@ import org.slf4j.LoggerFactory;
 import com.aem.demo.core.models.Author;
 import com.day.cq.search.QueryBuilder;
 import com.day.cq.wcm.api.Page;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
 
 @Model(
     adaptables = SlingHttpServletRequest.class,
     adapters = Author.class,
-    defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
+    resourceType = AuthorImpl.RESOURCE_TYPE,
+    defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
+)
+@Exporter(name = "jackson", extensions = "json", selector = "demo",
+options = {
+		@ExporterOption(name = "SerializationFeature.WRAP_ROOT_VALUE", value="true"),
+		@ExporterOption(name = "MapperFeature.SORT_PROPERTIES_ALPHABETICALLY", value="true")
+})
+@JsonRootName("AuthorDetails")
 public class AuthorImpl implements Author{
     private static final Logger LOG = LoggerFactory.getLogger(AuthorImpl.class);
+    static final String RESOURCE_TYPE = "aemdemo/components/author";
 
     @SlingObject
     ResourceResolver resourceresolver; /* to retreive the commonly used resource, slingObject annotation is used */
@@ -70,6 +84,7 @@ public class AuthorImpl implements Author{
     boolean isProf;
 
     @Override
+    @JsonProperty(value = "AuthorFirstName")
     public String getFirstName() {
         return fname;
     }
@@ -90,6 +105,7 @@ public class AuthorImpl implements Author{
     }
 
 	@Override
+	@JsonIgnore
 	public String getRequestAttribute() {
 		return reqAttribute;
 	}
@@ -107,6 +123,12 @@ public class AuthorImpl implements Author{
 	@Override
 	public String getLastModifiedBy() {
 		return modifiedBy;
+	}
+	
+	/* for Exporter example code */
+	@JsonProperty(value = "author-name")
+	public String authorName() {
+		return "AEM Demo";
 	}
     
 }

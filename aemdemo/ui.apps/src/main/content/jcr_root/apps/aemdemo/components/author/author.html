@@ -14,4 +14,7 @@
     <div>Request Attribute : ${author.requestAttribute}</div>
     <div>Page Name : ${author.basicPageName}</div>
     <div>Last Modified By : ${author.lastModifiedBy}</div>
+    <div data-sly-repeat.item="${properties.books}">
+	    <p><b>Book Name:</b> ${item}<p>
+	</div>
 </div>
