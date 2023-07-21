@@ -1,0 +1,18 @@
+<div data-sly-use.demoexporter="com.aem.geeks.core.models.XmlExporter"></div>
+<!-- Basic Card Example -->
+ <div class="card shadow mb-4">
+     <div class="card-header py-3">
+         <h6 class="m-0 font-weight-bold text-primary">${card.title}</h6>
+     </div>
+     <div class="card-body">
+         <p>Title : <b>${demoexporter.title}</b></p>
+         <p>Description :<b>${demoexporter.description}</b></p>
+         <p> Date : <b>${'MMM dd,yyyy' @ format=demoexporter.date}</b> </p>
+
+         ================== USING LIST ================
+         <div data-sly-list.item="${demoexporter.books}">
+             <p> Book ${itemList.count} : <b>${item} </b></p>
+         </div>
+
+     </div>
+ </div>
