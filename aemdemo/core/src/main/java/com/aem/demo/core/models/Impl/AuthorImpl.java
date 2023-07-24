@@ -1,5 +1,9 @@
 package com.aem.demo.core.models.Impl;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -79,6 +83,9 @@ public class AuthorImpl implements Author{
     @Default(values = "Demo")
     String lname;
     
+    @ValueMapValue
+	private List<String> books;
+    
     @Inject
     @Via("resource") /* to retreive dialog values of is Professor checkbox value, also this need to be used when SlingHttpServletRequest class is used  */
     boolean isProf;
@@ -115,10 +122,10 @@ public class AuthorImpl implements Author{
 		return resource.getName();
 	}
 	
-	@PostConstruct /* Once all injections are completed, this method will execute */
+	/*@PostConstruct  Once all injections are completed, this method will execute 
 	protected void init() {
 		LOG.info("\n Inside init method {} : {}",currentPage.getTitle(),resource.getPath());
-	}
+	}*/
 
 	@Override
 	public String getLastModifiedBy() {
@@ -129,6 +136,17 @@ public class AuthorImpl implements Author{
 	@JsonProperty(value = "author-name")
 	public String authorName() {
 		return "AEM Demo";
+	}
+
+	@Override
+	public List<String> getAuthorBooks() {
+		// TODO Auto-generated method stub
+		if(books != null) {
+			return new ArrayList<String>(books);
+		}
+		else {
+			return Collections.emptyList();
+		}
 	}
     
 }

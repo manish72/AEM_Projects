@@ -1,0 +1,23 @@
+{
+	"author": {
+		"jcr:primaryType": "nt:unstructured",
+		"jcr:createdBy": "admin",
+		"jcr:lastModifiedBy": "admin",
+		"isProf": true,
+		"books": [
+			"A man in the boat",
+			"Book3",
+			"Book4"
+		],
+		"fname": "MANISH GURU",
+		"lname": "Vankadhara"
+	},
+	"author-empty-books": {
+		"jcr:primaryType": "nt:unstructured",
+		"jcr:createdBy": "admin",
+		"jcr:lastModifiedBy": "admin",
+		"isProf": true,
+		"fname": "MANISH GURU",
+		"lname": "Vankadhara"
+	}
+}
