@@ -10,6 +10,7 @@
 <div data-sly-use.author = "${'com.aem.demo.core.models.Author' @ rAttribute='TestAttribute'}">
     <div>First Name : ${author.firstName}</div>
     <div>Last Name : ${author.lastName}</div>
+    <div>Books : ${author.authorBooks @ join=", "}</div>
     <div>Current Page Title : ${author.currentPageTitle}</div>
     <div>Request Attribute : ${author.requestAttribute}</div>
     <div>Page Name : ${author.basicPageName}</div>
