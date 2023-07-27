@@ -1,0 +1,12 @@
+<div data-sly-template.authorBooks="${@ books}">
+	<div data-sly-list.item = "${books.bookDetailsWithMap}">
+		<p> Book : <b>${item.bookname} </b></p>
+		<p> Subject : <b>${item.booksubject} </b></p>		
+	</div>
+</div>
+<div data-sly-template.mapAttributes="${@ attribute}">
+	<div data-sly-list.item = "${attribute}">
+		<p> key : <b>${item} </b></p>
+		<p> value : <b>${attribute[item]} </b></p>		
+	</div>
+</div>

@@ -2,16 +2,16 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2023-07-24T20:23:29.290+05:30"
+        cq:lastModified="{Date}2023-07-24T20:23:22.074+05:30"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2023-07-24T20:07:55.892+05:30"
+        cq:lastRolledout="{Date}2023-07-24T20:23:07.792+05:30"
         cq:lastRolledoutBy="admin"
         cq:redirectTarget="/content/aemdemo/us/en"
         cq:siteOwner="admin"
         cq:template="/conf/aemdemo/settings/wcm/templates/page-content"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="United States"
+        jcr:title="India"
         sling:resourceType="aemdemo/components/page"
         hideInNav="{Boolean}true">
         <cq:LiveSyncConfig
@@ -24,5 +24,5 @@
             sling:resourceType="core/wcm/components/image/v3/image"/>
     </jcr:content>
     <en/>
-    <es/>
+    <hi/>
 </jcr:root>

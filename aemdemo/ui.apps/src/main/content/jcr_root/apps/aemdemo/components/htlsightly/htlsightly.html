@@ -1,0 +1,114 @@
+<h1>-----------------Sightly Demo------------------</h1>
+<div data-sly-use.htl = "com.aem.demo.core.models.HTLSightly">
+	
+	========================= USING LIST =====================
+	<div class="list" data-sly-list.item="${htl.books @ begin = 0, step = 2, end = 6}">
+		<p> Book  #${itemList.count} <b>${item} </b></p>
+	</div>
+	<!--
+	<div data-sly-list.item="${htl.books}">
+		<p> Index : <b>${itemList.index}</b>, First : <b>${itemList.first}</b>, Middle : <b>${itemList.middle}</b>, Last : <b>${itemList.last}</b>, Odd : <b>${itemList.odd}</b></p>
+		<p> Book #${itemList.count}: <b>${item} </b></p>
+	</div>-->
+	
+	========================= USING REPEAT =====================
+	<div class="repeat" data-sly-repeat.item="${htl.books @ begin = 0, step = 2, end = 6}">
+		<p> Book  #${itemList.count} <b>${item} </b></p>
+	</div>
+	<!--
+	<div data-sly-repeat.item="${htl.books}">
+		<p> Index : <b>${itemList.index}</b>, First : <b>${itemList.first}</b>, Middle : <b>${itemList.middle}</b>, Last : <b>${itemList.last}</b>, Odd : <b>${itemList.odd}</b></p>
+		<p> Book #${itemList.count}: <b>${item} </b></p>		
+	</div>-->
+	
+	<!--
+	
+	========================= USING LIST WITH MAP =======================
+	<div data-sly-list.item = "${htl.bookDetailsWithMap}">
+		<p> Book : <b>${item.bookname} </b></p>
+		<p> Subject : <b>${item.booksubject} </b></p>		
+	</div>
+	
+	========================= USING MAP =======================
+	<div data-sly-list.item = "${htl.booksMap}">
+		<p> key : <b>${item} </b></p>
+		<p> value : <b>${htl.booksMap[item]} </b></p>		
+	</div>-->
+	
+	<!--========================= FROM data-sly-template ===============
+	<div data-sly-use.booksTemplate="authorbooks.html">
+		<h3>-----------------TEMPLATE 1------------------------</h3>
+		<sly data-sly-call="${booksTemplate.authorBooks @ books=htl}"></sly>
+		<h3>-----------------TEMPLATE 2------------------------</h3>
+		<sly data-sly-call="${booksTemplate.mapAttributes @ attribute=htl.booksMap}"></sly>
+	</div>-->
+	
+	<!--
+	<div id="html-attribute">
+		<p>Using HTML Tag</p>
+	</div>
+	
+	<div id="sightly-attribute" data-sly-attribute.attribute1="Overwritten value" data-sly-attribute="${htl.booksMap}">
+		<p>Using Sightly Attribute</p>
+	</div>
+	
+	================================= FROM data-sly-include ===================================
+	<div data-sly-include="include1.html">AEM DEMO</div>
+	<div data-sly-include="${'include3.html' @ prependPath='/files'}"></div>
+	<div data-sly-include="${@ file = 'include1.html'}"></div>
+	<div data-sly-include="${'include3.html' @ prependPath='/prepend' , appendPath='/append' }"></div>
+	
+	============================= FROM data-sly-resource ===========================
+	<div data-sly-resource="${'author' @ prependPath='/content/aemdemo/language-masters/en/'}"></div>
+	<div data-sly-resource="${'/content/aemdemo/language-masters/basic-page/jcr:content/content/author' @ addSelectors='test'}"></div>-->
+	<!-- display below location page 'author' when resource type is '/apps/aemdemo/components/author'-->
+	<!--<div data-sly-resource="${'/content/aemdemo/language-masters/basic-page/jcr:content/content/author' @ resourceType='aemdemo/components/author'}"></div>-->
+	<!-- to include any component, use below code -->
+	<!--<div data-sly-resource="${ @ path='author' , resourceType='aemdemo/components/author' }"></div>-->
+	
+	<!--
+	============================ Using Calendar Data =================================
+	<div> ${'yyyy-MM-dd' @ format=htl.publishDate} </div>
+	<div> ${'yyyy-MM-dd HH:mm' @ format=htl.publishDate, timezone= 'UTC'}</div>
+	<div> ${'EEEE, d MMM y' @ format=htl.publishDate, timezone= 'UTC', locale='de'}</div>
+	<div>${'yyyy-MM-dd HH:mm:ss.SSSXXX' @ format=htl.publishDate, timezone= 'GMT+05:30'}</div>
+	<div>${'dd MMMM \'\'yy hh:mm a; \'day in year\': D; \'week in year\': w' @ format=htl.publishDate, timezone= 'UTC'}</div>-->
+	
+	<!--
+	============================ Using Global Objects ==================================
+	<div><p> Dialog: <b> ${properties.numbers}</b></p></div>
+	<div><p>Page Properties : <b> ${pageProperties.jcr:title}</b></p></div>
+	<div><p>Inherited Page Properties : <b> ${inheritedPageProperties['jcr:title']}</b></p></div>
+	
+	<div><p>Component: <b> ${component ['title']}</b></p></div>
+	<div><p>Component Context: <b> ${componentContext.page.title}</b></p></div>
+	<div><p>Design Node : <b> ${currentDesign.path}</b></p></div>
+	<div><p>Current Node: <b> ${currentNode.path}</b></p></div>
+	<div><p>Current Page: <b> ${currentPage.path}</b></p></div>
+	<div><p>Resource: <b> ${resource.path}</b></p></div>
+	<div><p>Resource Page : <b> ${resourcePage.path}</b></p></div>
+	<div><p>Resource Design: <b> ${resourceDesign.path}</b></p></div>
+	<div><p>WCMMODE -> EDIT / PREVIEW: <b> ${wcmmode.edit} / ${wcmmode.preview}</b></p></div>-->
+	
+	============================= Using Context =============================
+	<!-- using styleToken and styleString to render styles for div tag -->
+	<div style="color: ${'#FFA500' @ context='styleToken'};font-style :${'italic' @ context='styleToken'};font-family : ${'Arial, Helvetica, sans-serif' @ context='styleString'};">
+		<p>This is Style Token</p>
+	</div>
+	<!-- using scriptToken context -->
+	<div>
+		<script>
+			function testScriptContext(){
+				var contexttest="$('This is context' @ context = 'scriptString')";
+				console.log("------Script Context being tested-----------"+contexttest);
+			}
+		</script>
+		<input type="button" class="btn btn-info" onclick="${'testScriptContext' @ context='scriptToken'}()" value="Check Script Context">
+	<div>
+	<!-- using html context -->
+	<div>
+		<p>${'<h1>This is HTML Context</h1>' @ context='html'}</p>
+		<p>${'234569123' @ context='number'}</p>
+	</div>
+	
+</div>

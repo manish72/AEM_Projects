@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-07-24T20:07:58.454+05:30"
+        cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2023-07-24T20:07:58.462+05:30"
+        cq:lastRolledoutBy="admin"
+        cq:lastTranslationUpdate="{Date}2023-07-24T19:56:17.732+05:30"
+        cq:template="/apps/aemdemo/templates/demotest"
+        cq:translationSourcePath="/content/aemdemo/language-masters/en/author-books"
+        cq:translationStatus="DRAFT"
+        jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSync]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Author Books"
+        sling:resourceType="/apps/aemdemo/components/structure/page">
+        <cq:LiveSyncConfig
+            cq:isDeep="{Boolean}true"
+            cq:master="/content/aemdemo/language-masters/es/author-books"
+            cq:rolloutConfigs="[/libs/msm/wcm/rolloutconfigs/default]"
+            jcr:primaryType="cq:LiveCopy"/>
+    </jcr:content>
+</jcr:root>

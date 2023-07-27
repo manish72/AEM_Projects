@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2023-07-20T22:24:53.952+05:30"
+        cq:lastModified="{Date}2023-07-26T12:30:23.044+05:30"
         cq:lastModifiedBy="admin"
         cq:template="/apps/aemdemo/templates/demotest"
         jcr:primaryType="cq:PageContent"
@@ -22,16 +22,18 @@
             <author
                 jcr:created="{Date}2023-07-19T15:02:17.533+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2023-07-20T15:51:48.017+05:30"
+                jcr:lastModified="{Date}2023-07-21T15:33:28.670+05:30"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="aemdemo/components/author"
-                books="[A man in the boat,The hound of the Bhaskarvilles]"
-                isProf="true"/>
+                books="[A man in the boat,Book3,Book4]"
+                fname="MANISH GURU"
+                isProf="true"
+                lname="Vankadhara"/>
             <author_books
                 jcr:created="{Date}2023-07-20T16:08:26.395+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2023-07-20T22:24:53.944+05:30"
+                jcr:lastModified="{Date}2023-07-21T12:47:11.128+05:30"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="aemdemo/components/author-books"
@@ -69,12 +71,71 @@
                         <bookeditions jcr:primaryType="nt:unstructured">
                             <item0
                                 jcr:primaryType="nt:unstructured"
-                                bookediton="5"
-                                editondate="{Date}2023-07-29T00:00:00.000+05:30"/>
+                                bookedition="110"
+                                editiondate="{Date}2023-07-21T00:00:00.000+05:30"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                bookedition="10"
+                                editiondate="{Date}2023-07-27T00:00:00.000+05:30"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                bookedition="200"
+                                editiondate="{Date}2023-08-05T00:00:00.000+05:30"/>
                         </bookeditions>
                     </item0>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        bookname="book2"
+                        booksubject="SFCC">
+                        <bookeditions jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                bookedition="50"
+                                editiondate="{Date}2023-10-13T00:00:00.000+05:30"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                bookedition="800"
+                                editiondate="{Date}2023-09-30T00:00:00.000+05:30"/>
+                        </bookeditions>
+                    </item1>
                 </bookdetailswithnestedmultifield>
             </author_books>
+            <xmlexporter
+                jcr:created="{Date}2023-07-21T17:07:39.687+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-07-21T17:08:21.519+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemdemo/components/xmlexporter"
+                books="[A man in the boat,Book3,The hound of the Bhaskarvilles]"
+                xmldate="{Date}2023-07-31T00:00:00.000+05:30"
+                xmldescription="Converts model data to XML Data"
+                xmltitle="XML Exporter"/>
+            <multiexporter
+                jcr:created="{Date}2023-07-21T17:39:02.314+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-07-21T17:39:43.491+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemdemo/components/multiexporter"
+                books="[A man in the boat,The hound of the Bhaskarvilles,Book3]"
+                date="{Date}2023-09-10T00:00:00.000+05:30"
+                description="MultiExporter Component"
+                title="MultiExporter"/>
+            <servicedemo
+                jcr:created="{Date}2023-07-25T22:33:13.030+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-07-25T22:33:13.030+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemdemo/components/servicedemo"/>
+            <osgiconfigdemo
+                jcr:created="{Date}2023-07-26T12:30:22.982+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-07-26T12:30:22.982+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemdemo/components/osgiconfigdemo"/>
         </content>
     </jcr:content>
     <demo-home-page/>

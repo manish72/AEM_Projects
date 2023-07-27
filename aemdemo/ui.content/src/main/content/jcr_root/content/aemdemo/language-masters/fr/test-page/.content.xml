@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:cloudserviceconfigs="[cloudconfigs/translation/translationcfg/default_translation,cloudconfigs/translation/msft-translation/msft_trial]"
+        cq:conf=""
+        cq:lastModified="{Date}2023-07-24T20:34:36.045+05:30"
+        cq:lastModifiedBy="translation-job-service"
+        cq:lastTranslationUpdate="{Date}2023-07-24T20:34:36.045+05:30"
+        cq:template="/apps/aemdemo/templates/demotest"
+        cq:translationSourcePath="/content/aemdemo/language-masters/en/test-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Test Page"
+        sling:resourceType="/apps/aemdemo/components/structure/page"/>
+</jcr:root>

@@ -9,5 +9,11 @@
         sling:resourceType="aemdemo/components/page"
         hideInNav="{Boolean}true"/>
     <en/>
+    <ga/>
+    <hi/>
+    <fr/>
+    <es/>
+    <de/>
     <basic-page/>
+    <demo-sightly/>
 </jcr:root>

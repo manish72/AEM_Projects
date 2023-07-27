@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2023-07-24T20:15:48.567+05:30"
+        cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2023-07-24T20:15:48.567+05:30"
+        cq:lastRolledoutBy="admin"
+        cq:template="/apps/aemdemo/templates/demotest"
+        jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSync]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Author Bio"
+        sling:resourceType="/apps/aemdemo/components/structure/page">
+        <cq:featuredimage
+            cq:lastRolledout="{Date}2023-07-24T20:15:48.567+05:30"
+            cq:lastRolledoutBy="admin"
+            jcr:lastModified="{Date}2023-07-24T20:15:48.566+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:LiveRelationship]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/wcm/components/image/v3/image"
+            altValueFromDAM="true"/>
+        <cq:LiveSyncConfig
+            cq:isDeep="{Boolean}true"
+            cq:master="/content/aemdemo/language-masters/en/author"
+            cq:rolloutConfigs="[/libs/msm/wcm/rolloutconfigs/default]"
+            jcr:primaryType="cq:LiveCopy"/>
+    </jcr:content>
+</jcr:root>

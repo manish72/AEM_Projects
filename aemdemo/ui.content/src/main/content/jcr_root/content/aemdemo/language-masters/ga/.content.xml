@@ -2,13 +2,19 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:cloudserviceconfigs="[cloudconfigs/translation/translationcfg/default_translation,cloudconfigs/translation/msft-translation/msft_trial]"
+        cq:conf=""
         cq:contextHubPath="/etc/cloudsettings/default/contexthub"
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
-        cq:lastModified="{Date}2023-07-24T19:46:05.507+05:30"
-        cq:lastModifiedBy="admin"
+        cq:isLanguageRoot="{Boolean}true"
+        cq:lastModified="{Date}2023-07-24T20:34:36.146+05:30"
+        cq:lastModifiedBy="translation-job-service"
+        cq:lastTranslationUpdate="{Date}2023-07-24T20:34:36.146+05:30"
         cq:template="/conf/aemdemo/settings/wcm/templates/page-content"
+        cq:translationSourcePath="/content/aemdemo/language-masters/en"
+        jcr:language="ga"
         jcr:primaryType="cq:PageContent"
-        jcr:title="English"
+        jcr:title="ga"
         sling:resourceType="aemdemo/components/page"
         pageTitle="AEM Demo">
         <root
@@ -91,8 +97,5 @@
             sling:resourceType="core/wcm/components/image/v3/image"
             altValueFromDAM="false"/>
     </jcr:content>
-    <home/>
-    <author/>
-    <author-books/>
     <test-page/>
 </jcr:root>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-07-25T12:01:08.622+05:30"
+        cq:lastModifiedBy="translation-job-service"
+        cq:lastTranslationDone="{Date}2023-07-25T12:01:08.622+05:30"
+        cq:lastTranslationUpdate="{Date}2023-07-24T19:56:23.412+05:30"
+        cq:template="/apps/aemdemo/templates/demotest"
+        cq:translationMethod="MACHINE_TRANSLATION"
+        cq:translationProviderCloudConfig="/libs/settings/cloudconfigs/translation/msft-translation/msft_trial"
+        cq:translationProviderName="microsoft"
+        cq:translationSourcePath="/content/aemdemo/language-masters/en/home"
+        cq:translationStatus="DRAFT"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="घर"
+        sling:resourceType="/apps/aemdemo/components/structure/page"/>
+</jcr:root>
