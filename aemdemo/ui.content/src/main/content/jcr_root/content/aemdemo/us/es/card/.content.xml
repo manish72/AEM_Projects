@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-08-03T20:14:22.106+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/aemdemo/templates/demotest"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Card"
+        jcr:uuid="1f5cfdc9-0c6a-412d-b392-0e50264a5a8c"
+        sling:resourceType="/apps/aemdemo/components/structure/page">
+        <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <card
+                jcr:created="{Date}2023-08-03T20:14:22.103+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-08-03T20:14:22.103+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemdemo/components/card"/>
+        </content>
+    </jcr:content>
+</jcr:root>

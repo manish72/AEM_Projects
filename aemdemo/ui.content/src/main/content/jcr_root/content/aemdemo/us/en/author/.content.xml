@@ -28,4 +28,9 @@
             cq:rolloutConfigs="[/libs/msm/wcm/rolloutconfigs/default]"
             jcr:primaryType="cq:LiveCopy"/>
     </jcr:content>
+    <demo1/>
+    <demo2/>
+    <demo3/>
+    <demo4/>
+    <test1/>
 </jcr:root>

@@ -12,6 +12,7 @@
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
         jcr:title="India"
+        sling:configRef="/conf/aemdemo/in"
         sling:resourceType="aemdemo/components/page"
         hideInNav="{Boolean}true">
         <cq:LiveSyncConfig

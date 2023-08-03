@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory;
 
 import com.aem.demo.core.services.SearchService;
 
-
+/*Using R7 annotation */
 @Component(service = Servlet.class)
 @SlingServletPaths(
 		value = {"/demo/search"}
@@ -35,11 +35,18 @@ public class SearchServlet extends SlingAllMethodsServlet{
 		// TODO Auto-generated method stub
 		JSONObject searchResult = null;
 		try {
+			// For SQL2 Code
+			String searchPath = request.getRequestParameter("searchPath").getString();
+			searchResult = searchService.searchResultSQL2(searchPath);
+			
+			// For QueryBuilder Code
+			/*
 			String searchtext = request.getRequestParameter("searchtext").getString();
 			int pageNumber = Integer.parseInt(request.getRequestParameter("pageNumber").toString());
 			int resultPerPage = Integer.parseInt(request.getRequestParameter("resultPerPage").toString());
 			int startResult = pageNumber * resultPerPage;
 			searchResult = searchService.searchResult(searchtext,startResult,resultPerPage);
+			*/
 		}
 		catch (Exception e) {
 			// TODO: handle exception

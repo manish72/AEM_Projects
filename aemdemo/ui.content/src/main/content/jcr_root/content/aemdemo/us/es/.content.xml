@@ -16,6 +16,7 @@
         jcr:mixinTypes="[cq:LiveRelationship]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Spanish"
+        sling:configRef="/conf/aemdemo/us/es"
         sling:resourceType="aemdemo/components/page"
         pageTitle="AEM Demo">
         <root
@@ -149,4 +150,5 @@
     <home/>
     <author/>
     <author-books/>
+    <card/>
 </jcr:root>

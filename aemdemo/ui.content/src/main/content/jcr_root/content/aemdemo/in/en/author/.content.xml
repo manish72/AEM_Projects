@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:contextHubPath="/etc/cloudsettings/default/contexthub"
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
         cq:lastModified="{Date}2023-07-24T20:23:08.066+05:30"
         cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2023-08-03T12:28:19.451+05:30"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Deactivate"
         cq:lastRolledout="{Date}2023-07-24T20:23:08.066+05:30"
         cq:lastRolledoutBy="admin"
         cq:template="/apps/aemdemo/templates/demotest"
-        jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSync]"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSync,mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Author Bio"
+        jcr:uuid="b2b0c367-9c1e-491b-a5d5-a6f18d23db36"
         sling:resourceType="/apps/aemdemo/components/structure/page">
         <cq:featuredimage
             cq:lastRolledout="{Date}2023-07-24T20:23:08.066+05:30"
